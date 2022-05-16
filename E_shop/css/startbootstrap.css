@@ -1,0 +1,128 @@
+header {
+    background-image: url(https://startbootstrap.github.io/startbootstrap-agency/assets/img/header-bg.jpg);
+    padding-top: 17.5rem;
+    padding-bottom: 12.5rem;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+section,
+#service,
+#about,
+#contact {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+#contact {
+    
+    background-color: #212529;
+    background-image: url(https://startbootstrap.github.io/startbootstrap-agency/assets/img/map-image.png);
+}
+
+#team,
+#portfolio {
+    background-color: #f8f9fa;
+}
+
+.img-icon {
+    width: 128px;
+    height: 128px;
+    font-size: 60pt;
+    color: white;
+    font-weight: bolder;
+}
+
+.img-card {
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    width: 100%;
+    opacity: 1.0;
+}
+
+.hover-container {
+    position: relative;
+}
+
+.hover {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.hover-content {
+    color: white;
+    font-size: 100pt;
+    font-weight: 500;
+
+}
+
+.hover:hover {
+    opacity: 0.9;
+    background: rgba(255, 200, 0, 0.9);
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+
+}
+
+.timeline-item {
+    margin-bottom: 100px;
+}
+
+.timeline-item-img {
+    width: 156px;
+    height: 156px;
+    border: 0.2mm solid yellow;
+
+    margin-top: 5px;
+    margin-left: 4.5px;
+
+
+}
+
+.timeline-item-noneimg {
+    width: 156px;
+    height: 156px;
+    background-color: #ffc800;
+    margin-top: 5px;
+    margin-left: 4.5px;
+
+
+}
+
+.timeline-item-img-border {
+    width: 165px;
+    height: 165px;
+    background-color: #e9ecef;
+}
+
+.line {
+    position: relative;
+}
+
+.line::before {
+    content: '';
+    height: 100%;
+    width: 2px;
+    background-color: #f1f3f5;
+    z-index: -10;
+    position: absolute;
+    left: 50%;
+}
+.form-layout{
+    width: 100%;
+    height: 100%;
+}
+.form-container
+{
+    height: 27.2%;
+}

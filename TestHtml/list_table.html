@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> List_Table_Form </title>
+</head>
+
+<BODY>
+    <ul>
+
+        <p>
+        <h1>Monday</h1>
+        <ul>
+
+            <LI>Introduction to HTML</LI>
+            <LI>Creating Lists </LI>
+
+        </ul>
+        </p>
+        <LI>Tuesday </LI>
+        <ul>
+            <LI>Creating Tables </LI>
+            <LI>Inserting Images </LI>
+        </ul>
+
+    </ul>
+    <ul type="square">
+        <li>Mousses</li>
+        <li>Pastries</li>
+        <ul>
+            <li type="square">Croissant</li>
+            <li>Mille-feuille</li>
+            <li>Palmier</li>
+            <li>Profiterole</li>
+        </ul>
+        <li>Tarts</li>
+    </ul>
+    <OL type="A" start="2">
+        <LI>Monday
+            <OL>
+                <LI TYPE=i>Introduction to HTML
+                <LI TYPE=i value="3">Creating Lists
+            </OL>
+
+        <LI>Tuesday
+            <OL TYPE=A>
+                <LI value="17">Creating Tables
+                <LI>Inserting Images
+            </OL>
+
+        <LI Type="1">Wednesday
+            <OL START=5>
+                <LI>Creating Forms
+                <LI>Working with Frames
+            </OL>
+
+        <LI>Thursday
+        <LI type="a">Friday
+    </OL>
+
+    <table align="center" bordercolor="blue">
+        <!-- cellspaceing là khoảng cách từ viền tới ô, cellpadding là kc từ viên tới vắn bản    -->
+        <caption> Bảng</caption>
+        <thead>
+            <th></th>
+            <th align="center">tiêu dề cột 1</th>
+            <th>tiêu đề cột 2</th>
+        </thead>
+        <tr rowspan="2">
+            <th align="right">Nguyễn A</th>
+            <td>cột2 </td>
+            <td>Dư thừa </td>
+        </tr>
+        <tr>
+            <th>cột1 </th>
+            <td Colspan="2">cột2 </td>
+        </tr>
+        <table border="1" align="center">
+            <thead>
+                <th></th>
+                <th>9am</th>
+                <th>10am</th>
+                < <th>11am</th>
+                    <th>12am</th>
+            </thead>
+            <tr>
+                <th>Monday</th>
+                <td Colspan="2">Geography</td>
+                <td>Math</td>
+                <td>Art</td>
+            </tr>
+            <tr>
+                <th>Tuesday</th>
+                <td Colspan="3">Gym</td>
+                <td>HomeEc</td>
+            </tr>
+        </table>
+        <table border="1" align="center">
+            <thead>
+                <th></th>
+                <th>ABC</th>
+                <th>BBC</th>
+                < <th>CNN</th>
+
+            </thead>
+            <tr>
+                <th>6pm-7pm</th>
+                <td rowspan="2">Movie</td>
+                <td>Comedy</td>
+                <td>News</td>
+            </tr>
+            <tr>
+                <th>7pm-9pm</th>
+                <td>Sports</td>
+                <td>Current Affairs</td>
+            </tr>
+        </table>
+        <h1>Form nhập dữ liệu</h1>
+        <form method="Get">
+            <fieldset>
+                <legend>Log in</legend>
+                <label for="usrname">Username:</label>
+                <input Type="text" name="usrname" value="Username" size="50"><br>
+                <label for="password">Password: </label>
+                <input Type="password" name="password">
+
+            </fieldset>
+            <fieldset>
+                <legend>Check</legend>
+                <p>Hobby:
+                    <Input Type='Checkbox' Name='st' Value='nhac' Checked> Music
+                    <Input Type='Checkbox' Name='st' Value='film'> Film
+                    <Input Type='Checkbox' Name='st' Value='thethao'> Sport
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Radio btn</legend>
+                <p>
+                    <input type='radio' name=use value=home>Home<br>
+                    <input type='radio' name=use value=bus>Business<br>
+                    <input type='radio' name=use value=gov>Government<br>
+                    <input type='radio' name=use value=ed>Educational Institution<br>
+                    <input type='radio' name=use value=other>Other<br>
+                </p>
+            </fieldset>
+            <input type="submit" value="Save">
+            <br><input type="reset" value="Cancel">
+            <br><input type="hidden" value="1">
+            <br><input type="file">
+            <br><input type="image" width="50" height="50"
+                src="https://cdn2.vectorstock.com/i/1000x1000/52/51/power-button-icon-button-symbol-design-vector-26575251.jpg">
+            <br>
+            <button>Hello</button>
+            <br>
+            <input type="date" name="date">
+            <label for ="email">Email:</label>
+            <br><input type="email" name="email">
+            <br><br>
+            <select>
+                <OPTGROUP>
+                    <option value=1>ScanMaster
+
+                    <option value=4>LaserPrint 1000
+                    <option value=5 selected> LaserPrint 5000
+                </OPTGROUP>
+                <optgroup>
+                    <option value=6>Print/scan 150
+                    <option value=3>ScanMaster II
+                    <option value=7> Print/scan 250
+                </optgroup>
+
+
+            </select>
+            <textarea name="text" rows=5 col=50>
+                default text
+
+            </textarea>
+
+
+
+
+        </form>
+
+
+    </table>
+</BODY>
+
+</html>
