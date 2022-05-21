@@ -169,10 +169,12 @@ function findSameChildStr(str) {
             rs.push(tmp)
     }
     // use regex
-    let regex = new RegExp(/(\w)\1{1,}/g)
+    let regex = new RegExp(/(\w)\1{1,}/igm)
     console.log(regex.exec(str));
     let pattern = /(\w)\1{1,}/g
     console.log(str.match(pattern))
+    let s = "www"
+    console.log(s.matchAll(pattern))
     console.log(rs);
 }
 function onChange(e) {
@@ -206,17 +208,29 @@ key.addEventListener("keydown", onKeydown)
 document.addEventListener("keydown", onKeydown) */
 function checkPhone(data) {
     // 1 cach in regex
-    let pattern = /^\+[0-9]+$/
-    if (data.match(pattern)[0].length <= 12 && data.match(pattern)[0].length >= 10)
+    let pattern = /^\(\+84\)-[0-9]{3,4}\.[0-9]{3}\.[0-9]{3}/
+    /*    let rs = data.match(pattern);
+       if (rs)
+           if (rs[0].length <= 12 && rs[0].length >= 10) */
+    if (pattern.test(data)) {
+        console.log(pattern.exec(data));
         return true
+    }
     return false
 }
 function checkMail(data) {
     // cach 2 in regex
-    let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+    let regex = /[a-z0-9]+@[a-z]+[.][a-z]{2,3}$/
     if (regex.test(data))
         return true
     return false
+}
+function checkUsername(data) {
+    let pattern = /[a-z0-9]{6,}/i
+    if (pattern.test(data))
+        return true
+    return false
+
 }
 function onbtnClick() {
     var input1 = document.getElementById("1")
@@ -226,6 +240,8 @@ function onbtnClick() {
 
     if (input1.value == "")
         alert("Nhap username")
+    else if (!checkUsername(input1.value))
+        alert("Username khong hop le")
     else if (input2.value == "")
         alert("Nhap email")
     else if (!checkMail(input2.value))
@@ -237,4 +253,15 @@ function onbtnClick() {
     else if (input4.value == "")
         alert("Nhap nhan xet")
 
+}
+function test() {
+    var myRegex = /[0-9]/ig;
+    var s = "nguyen thi huyen 1 324 2"
+    // chay bieu thuc regex va tra ve ket qua khop
+    var e = myRegex.exec(s);
+    // kiem tra bthuc regex ci jhop hay khong so voi chioi dc cho
+    var t = myRegex.test(s)
+
+
+    console.log(e, t);
 }
