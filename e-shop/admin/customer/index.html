@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Manager</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/294584a371.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="sidebar__header">
+          <div class="sidebar__header-logo">
+            <a href="#" class="siderbar__header-logo" style="color: #fff">
+              <i class="fa-brands fa-bootstrap"></i>
+            </a>
+          </div>
+          <span class="sidebar__header-title">e-Shop</span>
+        </div>
+        <ul class="sidebar__menu">
+          <li class="sidebar__menu-item" data-tab="1">
+            <i class="fa-solid fa-house-chimney sidebar__menu-icon"></i>
+            <a href="#" class="sidebar__menu-link">Trang chủ</a>
+          </li>
+          <li class="sidebar__menu-item" data-tab="2">
+            <i class="fa-solid fa-gauge-high sidebar__menu-icon"></i>
+            <a href="#" class="sidebar__menu-link">Tổng quan</a>
+          </li>
+          <li class="sidebar__menu-item" data-tab="3">
+            <i class="fa-solid fa-calendar-days sidebar__menu-icon"></i>
+            <a href="#" class="sidebar__menu-link">Đơn hàng</a>
+          </li>
+          <li class="sidebar__menu-item" data-tab="4">
+            <i class="fa-solid fa-calendar-days sidebar__menu-icon"></i>
+            <a href="#" class="sidebar__menu-link">Sản phẩm</a>
+          </li>
+          <li class="sidebar__menu-item" data-tab="5">
+            <i class="fa-solid fa-circle-user sidebar__menu-icon"></i>
+            <a href="#" class="sidebar__menu-link">Khách hàng</a>
+          </li>
+        </ul>
+        <div class="sidebar__account">
+          <div class="sidebar__account-avatar"><img src="./photo-1439853949127-fa647821eba0.avif" alt="" class="image"></div>
+          <div class="sidebar__account-name">Tuấn</div>
+          <i class="bx bxs-down-arrow sidebar__account-icon"></i>
+        </div>
+      </div>
+      <div class="article">
+        <div class="article__wrapper" data-tab="5">
+          <div class="header">
+            <div class="header__title">Danh sách khách hàng</div>
+            <div class="header__button">
+              <button class="subbutton">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+              <button class="createbutton">
+                <i class="bx bx-plus-circle"></i>
+                <span class="buttontext">Tạo khách hàng</span>
+              </button>
+            </div>
+          </div>
+          <div class="table">
+            <ul class="table__tab">
+              <li class="table__item">
+                <a href="#" class="table__link">Tất cả khách hàng</a>
+              </li>
+              <li class="table__item">
+                <a href="#" class="table__link">Nhận email quảng cáo</a>
+              </li>
+              <li class="table__item">
+                <a href="#" class="table__link">Khách hàng thân thiết</a>
+              </li>
+              <li class="table__item">
+                <a href="#" class="table__link">Khách hàng tiềm năng</a>
+              </li>
+              <li class="table__item">
+                <a href="#" class="table__link">Trong nước</a>
+              </li>
+            </ul>
+            <div class="table__input">
+              <button class="table__filter">
+                <i class="bx bx-filter table__icon"></i>
+                <span class="table__text">Thêm điều kiện lọc</span>
+              </button>
+              <div class="table__search">
+                <i class="bx bx-search-alt-2 table__search-icon"></i>
+                <input
+                  type="text"
+                  class="table__search-input"
+                  placeholder="Tìm kiếm"
+                />
+              </div>
+            </div>
+            <div class="table__customer">
+              <div class="table__title">
+                <div class="table__title-checkbox">
+                  <input type="checkbox" name="" id="" class="checkboxall" />
+                </div>
+                <div class="table__title-info">Khách hàng</div>
+                <div class="table__title-location">Địa điểm</div>
+                <div class="table__title-totalorder">Tổng đơn hàng</div>
+                <div class="table__title-lastorder">Đơn hàng gần nhất</div>
+                <div class="table__title-price">Tổng</div>
+              </div>
+              <div class="customer__list">
+                <div class="customer__item">
+                  <div class="customer__item-checkbox">
+                    <input type="checkbox" name="" id="" class="checkbox" />
+                  </div>
+                  <div class="customer__item-info">0931 570 896</div>
+                  <div class="customer__item-location">
+                    Hồ Chí Minh, Vietnam
+                  </div>
+                  <div class="customer__item-totalorder">1</div>
+                  <div
+                    class="customer__item-lastorder"
+                    style="color: #0e95f0; cursor: pointer"
+                  >
+                    #100000
+                  </div>
+                  <div class="customer__item-price">60.000 đ</div>
+                </div>
+                <div class="customer__item">
+                  <div class="customer__item-checkbox">
+                    <input type="checkbox" name="" id="" class="checkbox" />
+                  </div>
+                  <div class="customer__item-info">0903 184 798</div>
+                  <div class="customer__item-location">
+                    Hồ Chí Minh, Vietnam
+                  </div>
+                  <div class="customer__item-totalorder">0</div>
+                  <div class="customer__item-lastorder">_</div>
+                  <div class="customer__item-price">0 đ</div>
+                </div>
+              </div>
+            </div>
+            <div class="table__footer">
+              <div class="table__dropdown">
+                <span class="table__dropdown-test">Hiển thị 20</span>
+                <i class="bx bx-chevron-down table__dropdown-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./customer.js"></script>
+  </body>
+</html>

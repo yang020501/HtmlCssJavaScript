@@ -205,10 +205,10 @@ function onClick() {
 
 /* var key = document.getElementById("input")
 key.addEventListener("keydown", onKeydown)
-document.addEventListener("keydown", onKeydown) */
+document.addEventListener("keydown", onKeydown) (+84)-3333.444.444 */
 function checkPhone(data) {
     // 1 cach in regex
-    let pattern = /^\(\+84\)-[0-9]{3,4}\.[0-9]{3}\.[0-9]{3}/
+    let pattern = /^\(\+84\)-[0-9]{3}\.[0-9]{3}\.[0-9]{3}/
     /*    let rs = data.match(pattern);
        if (rs)
            if (rs[0].length <= 12 && rs[0].length >= 10) */
