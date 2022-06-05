@@ -10,74 +10,56 @@
     <link rel="stylesheet" href="/css/cart.css">
     <script src="./bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="js/cart.js"></script>
+    <script src="js/cart.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container body">
-        <div class=" row ">
-            <div class="p-2 fs-5 text-start ">
-                <h3 class="d-inline-block">Giỏ hàng của bạn</h3>
-                <button class="btn btn-primary ms-2 px-3">Sửa</button>
-            </div>
-            <div class="p-2 flex-wrap  d-flex">
-                <div id="left" class="p-2 flex-lg-grow-1 d-flex flex-column">
-                    <div>Title and chat with shop feature</div>
-                    <div id="left-content-product">
-                  <!--       <div class="p-2 d-flex flex-row align-items-center">
-                            <div class="flex-grow p-2">
-                                <input type="checkbox" class="form-check-input" />
-                            </div>
-                            <div class="flex-shrink-0 p-2">
-                                <img class="img" src="img/2.jpg" />
-                            </div>
-                            <div class="flex-fill  p-2">
-                                TIle san pham
-                            </div>
-                            <div class="p-2">price</div>
-                            <div class=" flex-grow d-flex  align-items-center ">
-                                <button class="btn-secondary btn px-1 py-0">
-                                    <i class="bi bi-dash-lg text-black"></i>
-                                </button>
-                                <div class="p-2" style="width: 70px;">
-                                    <input type="number" class=" form-control" value="1">
+    <div class="body pt-5">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="container ">
+            <div class=" row ">
+                <div class="p-2 fs-5 text-start ">
+                    <h3 class="d-inline-block">Giỏ hàng của bạn</h3>
+                    <button class="btn btn-primary ms-2 px-3">Sửa</button>
+                </div>
+                <div class="p-2 flex-wrap  d-flex">
+                    <div id="left" class="p-2 flex-lg-grow-1 d-flex flex-column">
+                        <div>Title and chat with shop feature</div>
+                        <div id="left-content-product">
+                            // render here
+                        </div>
+                        <div>Coupon features</div>
+                    </div>
+                    <div id="right" class="p-2 flex-grow-0 d-flex flex-column">
+                        <div class="p-2">
+                            coupon features
+                        </div>
+                        <div class="p-2 flex-column  d-flex">
+                            <div class="p-2 d-flex">
+                                <div class="flex-fill">
+                                    Sản phẩm tạm tính
                                 </div>
-                                <button class="btn-secondary btn px-1 py-0">
-                                    <i class="bi bi-plus-lg text-black"></i>
-                                </button>
+                                <div id="sumPrice" class="text-end flex-fill text-danger">
+                                    0 VND
+                                </div>
                             </div>
                             <div class="p-2">
-                                <button class="btn btn-secondary ">
-                                    <i class="bi bi-trash text-black"></i>
-                                </button>
-                            </div>                            
-                        </div>       -->                  
-                    </div>
-                    
-                    <div>Coupon features</div>
-                </div>
-                <div id="right" class="p-2 flex-grow-0 d-flex flex-column">
-                    <div class="p-2">
-                        coupon features
-                    </div>
-                    <div class="p-2 flex-column  d-flex">
-                        <div class="p-2 d-flex">
-                            <div class="flex-fill">
-                                Sản phẩm tạm tính
+                                <button class="w-100 btn btn-danger ">Mua ngay</button>
                             </div>
-                            <div id="sumPrice" class="text-end flex-fill text-danger">
-                                0 VND
-                            </div>
-                        </div>
-                        <div class="p-2">
-                            <button class="w-100 btn btn-danger ">Mua ngay</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 
 </body>
