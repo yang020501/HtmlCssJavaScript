@@ -9,7 +9,7 @@ function deleteProduct(id) {
     localStorage.setItem('products', dataStr);
 
     $("#product-" + id).remove();
-   /*  $("#productTableBody").children().remove() */
+    /*  $("#productTableBody").children().remove() */
 }
 
 function renderProducts() {
@@ -35,6 +35,10 @@ function renderProducts() {
             '</tr>';
         $("#productTableBody").append(newRow);
     }
+}
+function randomId() {
+    const uint32 = window.crypto.getRandomValues(new Uint32Array(1))[0];
+    return uint32.toString(16);
 }
 
 $(document).ready(function () {
@@ -64,7 +68,7 @@ $(document).ready(function () {
             products = JSON.parse(allProductsStr);
         }
         var productInfo = {
-            "id": products.length + 1,
+            "id": randomId(),
             "productName": productName,
             "image": image,
             "price": price,
@@ -85,7 +89,7 @@ $(document).ready(function () {
             '<td>' + price + '</td>' +
             '<td>' + quantity + '</td>' +
             '<td>' +
-            '<button type="button" onclick="deleteProduct(' + products.length + ')" class="btn btn-primary">Xóa</button>' +
+            '<button type="button" onclick="deleteProduct(' + products.id + ')" class="btn btn-primary">Xóa</button>' +
             '</td>' +
             '</tr>';
 

@@ -192,7 +192,8 @@ function onLoad(e) {
     console.log("hello");
     console.log(e)
 }
-function onClick() {
+function onClick(id) {
+    console.log(id);
     var input = document.getElementById("input")
     if (input.value == "") {
         console.log("input plzz");

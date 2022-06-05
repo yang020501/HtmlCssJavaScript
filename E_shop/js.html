@@ -17,13 +17,15 @@
 <body>
     <input type="text" name="text" id="input" onchange="onChange(event)" onblur="onBlur()" onkeydown="onKeydown(event)">
     <input type="text" name="text" id="input" onchange="onChange(event)" onblur="onBlur()" onkeydown="onKeydown(event)">
-    <button type="submit" onclick="onClick()">OK</button>
+    <button type="submit" onclick="onClick({hello:'22222',pasasword:'222'})">OK</button>
     <button type="submit" onclick="onClick()">OK</button>
 
     <script src="./lib.js"></script>
 
     <script>
-        $('document')
+        var map = [];
+       
+        $('document').children().remove()
     </script>
 
     <!-- <script type="text/javascript">

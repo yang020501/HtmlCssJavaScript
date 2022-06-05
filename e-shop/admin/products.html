@@ -21,24 +21,24 @@
         var allProducts = [];
         function deleteProduct(id) {
             // Xoa mot product trong localstorage
-            allProducts.splice(id - 1, 1); // Xoa 1 phan tu trong mang
-
+            allProducts.splice(id-1,1); // Xoa 1 phan tu trong mang
+            
             // Chuyen bien object thanh chuoi
             var dataStr = JSON.stringify(allProducts);
             // Luu dskh vao local storage
             localStorage.setItem('allProducts', dataStr);
 
-            $("#product-" + id).remove();
+            $("#product-"+id).remove();
         }
 
-        function renderProducts() {
-
+        function renderProducts(){
+            
             // Doc tu local storage lay ds kh
             var allProductsStr = localStorage.getItem('allProducts');
-            if (allProductsStr != null) {
+            if(allProductsStr != null) {
                 allProducts = JSON.parse(allProductsStr);
             }
-            for (var i = 0; i < allProducts.length; i++) {
+            for(var i=0;i<allProducts.length;i++){
                 // truy cap vao vi tri thu i cua mang
                 // & luu vao bien object
                 var product = allProducts[i];
@@ -47,16 +47,16 @@
                 var image = product["image"];
                 var price = product["price"];
                 var quantity = product["quantity"];
-                var newRow = '<tr id="product-' + product.id + '">' +
-                    '<th scope="row">' + (i + 1) + '</th>' +
-                    '<td>' + product.productName + '</td>' +
-                    '<td>' + product.image + '</td>' +
-                    '<td>' + product.price + '</td>' +
-                    '<td>' + product.quantity + '</td>' +
-                    '<td>' +
-                    '<button type="button" onclick="deleteProduct(' + product.id  + ')" class="btn btn-primary">Xóa</button>' +
-                    '</td>' +
-                    '</tr>';
+                var newRow = '<tr id="product-'+(i+1)+'">'+
+                                            '<th scope="row">'+(i+1)+'</th>' +
+                                            '<td>'+productName+'</td>' +
+                                            '<td>'+image+'</td>' +                                            
+                                            '<td>'+price+'</td>' +
+                                            '<td>'+quantity+'</td>' +
+                                            '<td>' +
+                                                '<button type="button" onclick="deleteProduct('+(i+1)+')" class="btn btn-primary">Xóa</button>' +
+                                            '</td>' +
+                                        '</tr>';
                 $("#productTableBody").append(newRow);
             }
         }
@@ -69,8 +69,8 @@
             });
 
             // Bat su kien khi dialog mo
-            $("#productModal").on("show.bs.modal", function (event) {
-                $("#productName").val('')
+            $("#productModal").on("show.bs.modal", function(event){
+                $("#productName").val('');
                 $("#image").val('');
                 $("#price").val('');
                 $("#quantity").val('');
@@ -82,37 +82,36 @@
                 var image = $("#image").val();
                 var price = $("#price").val();
                 var quantity = $("#quantity").val();
+               
+                
+                // Doc tu local storage lay ds kh
                 var allProductsStr = localStorage.getItem('allProducts');
-                if (allProductsStr != null) {
-
+                if(allProductsStr != null) {
                     allProducts = JSON.parse(allProductsStr);
-                }
+                } 
                 var productInfo = {
-                    "id": allProducts.length + 1,
+                    "id":allProducts.length + 1,
                     "productName": productName,
                     "image": image,
-                    "price": price,
-                    "quantity": quantity
+                    "price":price,
+                    "quantity":quantity
                 };
-
-                // Doc tu local storage lay ds kh
-
                 allProducts.push(productInfo);
                 // Chuyen bien object thanh chuoi
                 var dataStr = JSON.stringify(allProducts);
                 // Luu dskh vao local storage
                 localStorage.setItem('allProducts', dataStr);
-                var newRow = '<tr id="product-' + allProducts.length + '">' +
-                    '<th scope="row">' + (allProducts.length) + '</th>' +
-                    '<td>' + productName + '</td>' +
-                    '<td>' + image + '</td>' +
-                    '<td>' + price + '</td>' +
-                    '<td>' + quantity + '</td>' +
-                    '<td>' +
-                    '<button type="button" onclick="deleteProduct(' + allProducts.length + ')" class="btn btn-primary">Xóa</button>' +
-                    '</td>' +
-                    '</tr>';
-
+                var newRow = '<tr id="product-'+ allProducts.length +'">'+
+                                            '<th scope="row">'+(allProducts.length)+'</th>' +
+                                            '<td>'+productName+'</td>' +
+                                            '<td>'+image+'</td>' +                                            
+                                            '<td>'+price+'</td>' +
+                                            '<td>'+quantity+'</td>' +
+                                            '<td>' +
+                                                '<button type="button" onclick="deleteProduct('+allProducts.length+')" class="btn btn-primary">Xóa</button>' +
+                                            '</td>' +
+                                        '</tr>';
+                
                 $("#productTableBody").append(newRow);
             });
         });
@@ -201,8 +200,7 @@
                                                         <input type="text" class="form-control" id="productName">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="message-text" class="col-form-label">Hình
-                                                            ảnh:</label>
+                                                        <label for="message-text" class="col-form-label">Hình ảnh:</label>
                                                         <input type="text" class="form-control" id="image">
                                                     </div>
                                                     <div class="mb-3">
@@ -210,8 +208,7 @@
                                                         <input type="number" class="form-control" id="price">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="message-text" class="col-form-label">Số
-                                                            lượng:</label>
+                                                        <label for="message-text" class="col-form-label">Số lượng:</label>
                                                         <input type="number" class="form-control" id="quantity">
                                                     </div>
                                                 </form>
@@ -220,7 +217,7 @@
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Hủy</button>
                                                 <button id="saveBtn" type="button" class="btn btn-primary"
-                                                    data-bs-dismiss="modal">Lưu</button>
+                                                data-bs-dismiss="modal">Lưu</button>
                                             </div>
                                         </div>
                                     </div>
@@ -237,7 +234,7 @@
                                         </tr>
                                     </thead>
                                     <tbody id="productTableBody">
-
+                                        
                                     </tbody>
                                 </table>
                             </div>

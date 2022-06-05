@@ -19,9 +19,8 @@ $(document).ready(function () {
     if (rs) {
         products = JSON.parse(rs)
     }
-    var product = products.filter((item) => item.id == productId)[0]
+    var product = products.filter((item,index) => (index+1) == productId)[0]
     if (product) {
-        console.log($.param());
         $('#productPrice').append(`<del>999.999 VND</del>&nbsp;<span
         class="specialPrice" >`+ `<span
          class="ms-3"   itemprop="price">`+ `${product.price}` + ` VND</span></span ></span >`)
